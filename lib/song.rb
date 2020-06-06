@@ -46,7 +46,7 @@ class Song
 
   def self.new_from_filename(filename)
     filename_array = filename.split("-")
-    filename_array = filename_array[1].split(".")
+    filename_array[1].split(".")
     filename_array.flatten
     filename_array.reject{|string| string == "mp3"}
   end
