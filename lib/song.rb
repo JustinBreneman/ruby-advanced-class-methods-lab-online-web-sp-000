@@ -48,9 +48,14 @@ class Song
     filename_array = filename.split(" - ")
     artist = filename_array[0]
     name = filename_array[1].split(".").reject{|string| string == "mp3"}.join
-#    name = name[0]#.split(" ").join(" ")
     song = self.new_by_name(name)
     song.artist_name = artist
+    song
+  end
+
+  def self.create_from_filename(filename)
+    song = self.new_from_filename(filename)
+    song.save
     song
   end
 end
