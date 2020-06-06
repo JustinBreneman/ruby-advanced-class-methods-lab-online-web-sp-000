@@ -48,6 +48,6 @@ class Song
     filename_array = filename.split("-")
     filename_array = filename_array[1].split(".")
     filename_array.flatten
-
+    filename_array.reject("mp3")
   end
 end
